@@ -1,0 +1,18 @@
+        Dim members As String
+        Dim id As Integer
+        Dim choice As Integer = 1
+
+        FileOpen(1, "D:\members.txt", OpenMode.Append)
+        Do
+            Console.Write("Enter member's name: ")
+            members = Console.ReadLine()
+            Console.Write("Enter member's ID: ")
+            id = Console.ReadLine()
+
+            WriteLine(1, members)
+            WriteLine(1, id)
+
+            Console.Write("Enter 0 to stop input, else enter any other digit: ")
+            choice = Console.ReadLine()
+        Loop Until choice = 0
+        FileClose(1)
