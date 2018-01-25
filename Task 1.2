@@ -1,0 +1,12 @@
+        Dim membername As String
+        Dim id As Integer
+
+        FileOpen(1, "D:\members.txt", OpenMode.Input)
+        Do
+            Input(1, membername)
+            Console.WriteLine("Member name: " & membername)
+            Input(1, id)
+            Console.WriteLine("Member ID: " & id)
+        Loop Until EOF(1)
+        FileClose(1)
+        Console.ReadKey()
