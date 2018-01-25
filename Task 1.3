@@ -1,0 +1,21 @@
+        Dim membername As String
+        Dim id As Integer
+        Dim searchName As String
+        Dim isFound As Boolean = False
+
+        Console.Write("Enter name to search for: ")
+        searchName = Console.ReadLine()
+        FileOpen(1, "D:\members.txt", OpenMode.Input)
+        Do
+            Input(1, membername)
+            Input(1, id)
+            If LCase(membername) = LCase(searchName) Then
+                Console.WriteLine("Member ID of " & membername & ": " & id)
+                isFound = True
+            End If
+        Loop Until EOF(1) Or isFound
+        FileClose(1)
+        If Not isFound Then
+            Console.WriteLine("No match found.")
+        End If
+        Console.ReadKey()
