@@ -1,0 +1,10 @@
+        Dim s1 As String
+        Dim s2 As String
+        Dim newS As String = ""
+        Console.Write("Enter first string: ")
+        s1 = Console.ReadLine()
+        Console.Write("Enter second string: ")
+        s2 = Console.ReadLine()
+        newS = s2(0) & Mid(s1, 2) & " " & s1(0) & Mid(s2, 2)
+        Console.WriteLine(newS)
+        Console.ReadKey()
